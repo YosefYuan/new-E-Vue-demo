@@ -30,7 +30,7 @@
             <h2>{{item.title}}</h2>
             <p>{{item.description}}</p>
             <div class="index-board-button">
-              <a class="button">立即购买</a>
+              <router-link class="button" :to="{path:'detail/' + item.toKey}">立即購買</router-link>
             </div>
           </div>
         </div>
@@ -87,13 +87,6 @@ export default {
       ],
       boardList: [
         {
-          title: '开放产品',
-          description: '开放产品是一款开放产品',
-          id: 'car',
-          toKey: 'analysis',
-          saleout: false
-        },
-        {
           title: '品牌营销',
           description: '品牌营销帮助你的产品更好地找到定位',
           id: 'earth',
@@ -106,6 +99,13 @@ export default {
           id: 'loud',
           toKey: 'forecast',
           saleout: true
+        },
+        {
+          title: '开放产品',
+          description: '开放产品是一款开放产品',
+          id: 'car',
+          toKey: 'analysis',
+          saleout: false
         },
         {
           title: '勇攀高峰',
